@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '../index.html';
     });
 
-    const bcbtn = document.getElementById('do cool javascript');
+    const bcbtn = document.getElementById('taxcollectors');
     bcbtn.addEventListener('click', function() {
         createBroadcast();
     });
