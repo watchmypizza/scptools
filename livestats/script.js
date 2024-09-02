@@ -7,14 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const proxyUrl = 'https://thingproxy.freeboard.io/fetch/';
             const timestamp = new Date().getTime();
             const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}&timestamp=${timestamp}`;
-            const response = await fetch(proxyUrl + apiUrl, {
-                method: 'GET',
-                headers: {
-                    'Cache-Control': 'no-cache, no-store, must-revalidate',
-                    'Pragma': 'no-cache',
-                    'Expires': '0'
-                }
-            });
+            const response = await fetch(proxyUrl + apiUrl);
+            
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -43,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fetch data initially
     fetchGameData();
     
-    // Set up interval to fetch data every 5 seconds
-    setInterval(fetchGameData, 5000);
+    // Set up interval to fetch data every 30 seconds instead of 5
+    setInterval(fetchGameData, 30000);
     
     const backbtn = document.getElementById('back');
     backbtn.addEventListener('click', function() {
