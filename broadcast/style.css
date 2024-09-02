@@ -83,6 +83,10 @@ button:hover {
     color: rgb(98, 0, 255);
 }
 
+ok {
+    
+}
+
 #back {
     width: fit-content;
     padding: 10px;
