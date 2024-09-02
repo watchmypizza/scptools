@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '../index.html';
     });
 
+    const bcbtn = document.getElementById('do cool javascript');
+    bcbtn.addEventListener('click', function() {
+        createBroadcast();
+    });
+
     const cdriot = document.getElementById('cdriot');
     const messageElement = document.getElementById('message');
     const testingPerms = document.getElementById('testingPerms');
