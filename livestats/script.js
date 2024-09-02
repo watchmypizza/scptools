@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     async function fetchGameData() {
         console.log('REFRESHED!');
         try {
-            const proxyUrl = 'https://api.allorigins.win/raw?url=';
+            const proxyUrl = 'https://thingproxy.freeboard.io/fetch/';
             const timestamp = new Date().getTime();
             const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}&timestamp=${timestamp}`;
-            const response = await fetch(proxyUrl + encodeURIComponent(apiUrl), {
+            const response = await fetch(proxyUrl + apiUrl, {
                 method: 'GET',
                 headers: {
                     'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -20,8 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             const data = await response.json();
             
-            // Rest of the code remains the same...
+            const currentPlayers = data.data[0].playing; 
+            const currentLikes = data.data[0].favoritedCount;
+            const currentVisits = data.data[0].visits; 
+            const lastUpdatedTimestamp = data.data[0].updated;
+            const lastUpdatedDate = new Date(lastUpdatedTimestamp);
+            const lastUpdated = lastUpdatedDate.toLocaleString();
             
+            document.getElementById('current-players').textContent = `Current Players: ${currentPlayers}`;
+            document.getElementById('current-likes').textContent = `Current Favorites: ${currentLikes}`;
+            document.getElementById('current-visits').textContent = `Current Visits: ${currentVisits}`;
+            document.getElementById('last-updated').textContent = `Last Updated: ${lastUpdated}`;
         } catch (error) {
             console.error('There was a problem with the fetch operation:', error);
             document.getElementById('current-players').textContent = 'Error fetching player data';
