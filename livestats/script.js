@@ -1,15 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     const gameId = '1165835263';
-
+    
     async function fetchGameData() {
         console.log('REFRESHED!');
         try {
             const proxyUrl = 'https://corsproxy.io/?';
-            const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}&timestamp=${new Date().getTime()}`;
+            const timestamp = new Date().getTime();
+            const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}&timestamp=${timestamp}`;
             const response = await fetch(proxyUrl + encodeURIComponent(apiUrl), {
                 method: 'GET',
                 headers: {
-                    'Cache-Control': 'no-cache', // Disable caching
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
                     'Pragma': 'no-cache',
                     'Expires': '0'
                 }
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const lastUpdatedTimestamp = data.data[0].updated;
             const lastUpdatedDate = new Date(lastUpdatedTimestamp);
             const lastUpdated = lastUpdatedDate.toLocaleString();
-
+            
             document.getElementById('current-players').textContent = `Current Players: ${currentPlayers}`;
             document.getElementById('current-likes').textContent = `Current Favorites: ${currentLikes}`;
             document.getElementById('current-visits').textContent = `Current Visits: ${currentVisits}`;
@@ -38,13 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('last-updated').textContent = 'Error fetching update time';
         }
     }
-
+    
     // Fetch data initially
     fetchGameData();
-
+    
     // Set up interval to fetch data every 5 seconds
     setInterval(fetchGameData, 5000);
-
+    
     const backbtn = document.getElementById('back');
     backbtn.addEventListener('click', function() {
         window.location.href = "../index.html";
