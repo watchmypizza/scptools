@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SCP Tools v2</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="../favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <div class="container">
+            <button id="backbtn" type="button">Back</button>
+            <h1>SCP Tools v2</h1>
+            <h2>Item Recipe Path Generator</h2>
+            <p id="footer">Select the starting item and desired item.</p>
+            <form id="mainForm">
+                <select id="startItem">
+                    <option value="">Select Starting Item</option>
+                    <option value="AK74">AK74</option>
+                    <option value="Bandages">Bandages</option>
+                    <option value="Blowtorch">Blowtorch</option>
+                    <option value="Cage">Cage</option>
+                    <option value="Candy">Candy</option>
+                    <option value="Cassette">Cassette</option>
+                    <option value="Clipboard">Clipboard</option>
+                    <option value="Coffee">Coffee</option>
+                    <option value="Crowbar">Crowbar</option>
+                    <option value="Cuffs">Cuffs</option>
+                    <option value="Desert Eagle">Desert Eagle</option>
+                    <option value="FAMAS">FAMAS</option>
+                    <option value="First Aid Kit">First Aid Kit</option>
+                    <option value="Flashlight">Flashlight</option>
+                    <option value="Food Tray">Food Tray</option>
+                    <option value="Glock-17">Glock-17</option>
+                    <option value="G17">G17</option>
+                    <option value="Green Food">Green Food</option>
+                    <option value="Handcuffs">Handcuffs</option>
+                    <option value="Hacking Tool">Hacking Tool</option>
+                    <option value="HK416">HK416</option>
+                    <option value="ID Card">ID Card</option>
+                    <option value="Iron Bars">Iron Bars</option>
+                    <option value="Lavender">Lavender</option>
+                    <option value="Lost Vent Map">Lost Vent Map</option>
+                    <option value="MasterCuffs">MasterCuffs</option>
+                    <option value="Medbag">Medbag</option>
+                    <option value="Medkit">Medkit</option>
+                    <option value="Mop">Mop</option>
+                    <option value="MP5SD">MP5SD</option>
+                    <option value="M249">M249</option>
+                    <option value="M4A1">M4A1</option>
+                    <option value="Nuke Key">Nuke Key</option>
+                    <option value="Orange Food">Orange Food</option>
+                    <option value="Photo">Photo</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="P90">P90</option>
+                    <option value="Red Food">Red Food</option>
+                    <option value="Riot Shield">Riot Shield</option>
+                    <option value="SCAR-H">SCAR-H</option>
+                    <option value="SCP-198">SCP-198</option>
+                    <option value="SCP-330">SCP-330</option>
+                    <option value="SCP-701-1">SCP-701-1</option>
+                    <option value="SCP-860">SCP-860</option>
+                    <option value="SCP-1025">SCP-1025</option>
+                    <option value="Stolen M4A1">Stolen M4A1</option>
+                    <option value="Taser">Taser</option>
+                    <option value="Teddy">Teddy</option>
+                    <option value="UMP">UMP</option>
+                    <option value="Vent Cover">Vent Cover</option>
+                    <option value="Vent Map">Vent Map</option>
+                    <option value="Wood Planks">Wood Planks</option>
+                </select>
+                <select id="desiredItem">
+                    <option value="">Select Starting Item</option>
+                    <option value="AK74">AK74</option>
+                    <option value="Bandages">Bandages</option>
+                    <option value="Blowtorch">Blowtorch</option>
+                    <option value="Cage">Cage</option>
+                    <option value="Candy">Candy</option>
+                    <option value="Cassette">Cassette</option>
+                    <option value="Clipboard">Clipboard</option>
+                    <option value="Coffee">Coffee</option>
+                    <option value="Crowbar">Crowbar</option>
+                    <option value="Cuffs">Cuffs</option>
+                    <option value="Desert Eagle">Desert Eagle</option>
+                    <option value="FAMAS">FAMAS</option>
+                    <option value="First Aid Kit">First Aid Kit</option>
+                    <option value="Flashlight">Flashlight</option>
+                    <option value="Food Tray">Food Tray</option>
+                    <option value="Glock-17">Glock-17</option>
+                    <option value="G17">G17</option>
+                    <option value="Green Food">Green Food</option>
+                    <option value="Handcuffs">Handcuffs</option>
+                    <option value="Hacking Tool">Hacking Tool</option>
+                    <option value="HK416">HK416</option>
+                    <option value="ID Card">ID Card</option>
+                    <option value="Iron Bars">Iron Bars</option>
+                    <option value="Lavender">Lavender</option>
+                    <option value="Lost Vent Map">Lost Vent Map</option>
+                    <option value="MasterCuffs">MasterCuffs</option>
+                    <option value="Medbag">Medbag</option>
+                    <option value="Medkit">Medkit</option>
+                    <option value="Mop">Mop</option>
+                    <option value="MP5SD">MP5SD</option>
+                    <option value="M249">M249</option>
+                    <option value="M4A1">M4A1</option>
+                    <option value="Nuke Key">Nuke Key</option>
+                    <option value="Orange Food">Orange Food</option>
+                    <option value="Photo">Photo</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="P90">P90</option>
+                    <option value="Red Food">Red Food</option>
+                    <option value="Riot Shield">Riot Shield</option>
+                    <option value="SCAR-H">SCAR-H</option>
+                    <option value="SCP-198">SCP-198</option>
+                    <option value="SCP-330">SCP-330</option>
+                    <option value="SCP-701-1">SCP-701-1</option>
+                    <option value="SCP-860">SCP-860</option>
+                    <option value="SCP-1025">SCP-1025</option>
+                    <option value="Stolen M4A1">Stolen M4A1</option>
+                    <option value="Taser">Taser</option>
+                    <option value="Teddy">Teddy</option>
+                    <option value="UMP">UMP</option>
+                    <option value="Vent Cover">Vent Cover</option>
+                    <option value="Vent Map">Vent Map</option>
+                    <option value="Wood Planks">Wood Planks</option>
+                </select>
+
+                <button id="generateButton" type="button">Generate Recipe</button>
+
+                <div class="output">
+                    <p id="recipe"></p>
+                </div>
+
+                <button id="rawoutputs" type="button">Raw List of Outputs</button>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Tools v2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <button class="back-btn" type="button">Back</button>
+        <h1>SCP Tools v2</h1>
+        <h2>Authority Calculator</h2>
+        <div class="comparison-container">
+            <!-- First Column -->
+            <div class="comparison-column">
+                <label for="playerTeam1">Player Team</label>
+                <select id="playerTeam1">
+                    <option value="1">Scientific Department</option>
+                    <option value="1">Medical Department</option>
+                    <option value="1">Security Department</option>
+                    <option value="1">Mobile Task Force</option>
+                    <option value="1.25">Rapid Response Team</option>
+                    <option value="1.5">Intelligence Agency</option>
+                    <option value="1.75">Site Director</option>
+                    <option value="2">O5 Council</option>
+                </select>
+                <label for="playerLevel1">Player Level</label>
+                <select id="playerLevel1">
+                    <option value="0">Level 0</option>
+                    <option value="1">Level 1</option>
+                    <option value="2">Level 2</option>
+                    <option value="3">Level 3</option>
+                    <option value="4">Level 4</option>
+                    <option value="5">Level 5</option>
+                </select>
+                <label for="teamLevel1">Team Level</label>
+                <select id="teamLevel1">
+                    <option value="1">Bottom (Rank 1)</option>
+                    <option value="2">(Rank 2)</option>
+                    <option value="3">(Rank 3)</option>
+                    <option value="4">(Rank 4)</option>
+                    <option value="5">(Rank 5)</option>
+                    <option value="6">(Rank 6)</option>
+                    <option value="7">(Rank 7)</option>
+                    <option value="8">(Rank 8)</option>
+                    <option value="9">Max (Rank 9)</option>
+                </select>
+                <label for="authorityScore1">Authority Score</label>
+                <input type="text" id="authorityScore1" value="0" readonly>
+            </div>
+
+            <!-- Second Column -->
+            <div class="comparison-column">
+                <label for="playerTeam2">Player Team</label>
+                <select id="playerTeam2">
+                    <option value="1">Scientific Department</option>
+                    <option value="1">Medical Department</option>
+                    <option value="1">Security Department</option>
+                    <option value="1">Mobile Task Force</option>
+                    <option value="1.25">Rapid Response Team</option>
+                    <option value="1.5">Intelligence Agency</option>
+                    <option value="1.75">Site Director</option>
+                    <option value="2">O5 Council</option>
+                </select>
+                <label for="playerLevel2">Player Level</label>
+                <select id="playerLevel2">
+                    <option value="0">Level 0</option>
+                    <option value="1">Level 1</option>
+                    <option value="2">Level 2</option>
+                    <option value="3">Level 3</option>
+                    <option value="4">Level 4</option>
+                    <option value="5">Level 5</option>
+                </select>
+                <label for="teamLevel2">Team Level</label>
+                <select id="teamLevel2">
+                    <option value="1">Bottom (Rank 1)</option>
+                    <option value="2">(Rank 2)</option>
+                    <option value="3">(Rank 3)</option>
+                    <option value="4">(Rank 4)</option>
+                    <option value="5">(Rank 5)</option>
+                    <option value="6">(Rank 6)</option>
+                    <option value="7">(Rank 7)</option>
+                    <option value="8">(Rank 8)</option>
+                    <option value="9">Max (Rank 9)</option>
+                </select>
+                <label for="authorityScore2">Authority Score</label>
+                <input type="text" id="authorityScore2" value="0" readonly>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p id="resultText">Select values to compare</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

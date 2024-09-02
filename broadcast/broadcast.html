@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>SCP Tools v2</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="../favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <div class="container">
+            <button id="back" type="button">Back</button>
+            <h1>SCP Tools v2</h1>
+            <form id="broadcastform">
+                <label for="siteStatus">Site Status:</label>
+                <select id="siteStatus">
+                    <option value="Clear">Clear</option>
+                    <option value="CD Escape">CD Escape</option>
+                    <option value="CI">CI</option>
+                    <option value="Breach">Breach</option>
+                    <option value="Lockdown">Lockdown</option>
+                </select>
+
+                <label for="threatLevel">Threat Level:</label>
+                <select id="threatLevel">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <label for="testingPerms">Testing Perms:</label>
+                <select id="testingPerms">
+                    <option value="No Perms needed">No Perms</option>
+                    <option value="Halted">Halted</option>
+                    <option value="Con-X SiD+">Con-X SiD+</option>
+                    <option value="Con-X & 35 SiD+">Con-X & 35 SiD+</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <input type="text" id="message" placeholder="Custom Message">
+    
+                <label for="splitter">Splitter:</label>
+                <input type="text" id="splitter" value="//">
+    
+                <button type="button" onclick="createBroadcast()">Create</button>
+            </form>
+
+            <div id="result"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

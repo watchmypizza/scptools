@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url("../backgif.gif") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.xp-calculator-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 66px;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: color 0.3s;
+}
+
+.back:hover {
+    color: rgb(98, 0, 255);
+}
+
+input {
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #4b4b75;
+    color: #fff;
+    text-align: center; /* Center text inside input fields */
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #4b4b75;
+    color:#fff;
+}
+
+.xp-calculator {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    text-align: center;
+    margin: 0 auto; /* Center the calculator horizontally */
+}
+
+.xp-calculator h1 {
+    margin-bottom: 20px;
+}
+
+.xp-calculator input {
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-align: center; /* Center text inside input fields */
+}
+
+.xp-calculator button {
+    padding: 10px 20px;
+    background-color: #575fcf;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    text-align: center; /* Center text inside the button */
+}
+
+.xp-calculator button:hover {
+    background-color: #4b4be7;
+}
+
+.xp-calculator #result {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center; /* Center the result text */
+}
+
+.xp-ul {
+    display: none;
+}
+
+.xp-ul.active {
+    display: block;
+}
+
+.xp-list {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto; /* Center the list horizontally */
+}
+
+.xp-list h2 {
+    margin-bottom: 20px;
+}
+
+.xp-list select {
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    text-align: center; /* Center text inside the select field */
+}
+
+.xp-list ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.xp-list ul li {
+    margin-bottom: 10px;
+}
+
+.xp-list p {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center; /* Center paragraph text */
+}

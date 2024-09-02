@@ -1,0 +1,79 @@
+/* style.css */
+body {
+    width: 800;
+    height: 433;
+    font-family: Arial, sans-serif;
+    background-image: url(../backgif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.map-container {
+    display: none; 
+}
+
+.map-container.active {
+    display: block; 
+}
+
+button {
+    width: 100%; /* Make buttons take up full width of container */
+    max-width: 300px; /* Optional: Limit maximum button width */
+    padding: 10px;
+    background-color: #575fcf;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0; /* No top margin */
+    margin-bottom: 10px; /* Vertical margin to space buttons */
+    transition: color 0.3s ease;
+    text-align: center; /* Center text inside button */
+}
+
+button:hover {
+    color: rgb(98, 0, 255);
+}
+
+#back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: color 0.3s;
+}
+
+#back:hover {
+    color: rgb(98, 0, 255);;
+}

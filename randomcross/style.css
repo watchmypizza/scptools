@@ -1,0 +1,98 @@
+body {
+    width: 800;
+    height: 433;
+    font-family: Arial, sans-serif;
+    background-image: url(../backgif.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 66px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: rgb(98, 0, 255);;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.legal-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.legal-checkbox label {
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.generate-button {
+    background-color: #575fcf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+#result {
+    margin: 10px 0 auto;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.generate-button:hover {
+    background-color: #4b4be7;
+    color: rgb(98, 0, 255);
+}
