@@ -2,11 +2,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const gameId = '1165835263';
 
     async function fetchGameData() {
-        console.log('REFRESHED!')
+        console.log('REFRESHED!');
         try {
             const proxyUrl = 'https://corsproxy.io/?';
-            const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}`;
-            const response = await fetch(proxyUrl + apiUrl);
+            const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}&timestamp=${new Date().getTime()}`;
+            const response = await fetch(proxyUrl + encodeURIComponent(apiUrl), {
+                method: 'GET',
+                headers: {
+                    'Cache-Control': 'no-cache', // Disable caching
+                    'Pragma': 'no-cache',
+                    'Expires': '0'
+                }
+            });
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -15,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentPlayers = data.data[0].playing; 
             const currentLikes = data.data[0].favoritedCount;
             const currentVisits = data.data[0].visits; 
-            const lastUpdatedTimestamp = data.data[0].updated; // Example timestamp field
+            const lastUpdatedTimestamp = data.data[0].updated;
             const lastUpdatedDate = new Date(lastUpdatedTimestamp);
-            const lastUpdated = lastUpdatedDate.toLocaleString(); // Converts to local time zone
+            const lastUpdated = lastUpdatedDate.toLocaleString();
 
             document.getElementById('current-players').textContent = `Current Players: ${currentPlayers}`;
             document.getElementById('current-likes').textContent = `Current Favorites: ${currentLikes}`;
@@ -36,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchGameData();
 
     // Set up interval to fetch data every 5 seconds
-    setInterval(fetchGameData, 500);
+    setInterval(fetchGameData, 5000);
 
     const backbtn = document.getElementById('back');
     backbtn.addEventListener('click', function() {
