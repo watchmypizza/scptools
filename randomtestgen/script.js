@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const generatebtn = document.getElementById('generate');
     const result = document.getElementById('result');
     const select = document.getElementById('sector');
-    const wikidot = document.getElementById('wikidot');
+    const visitlinkbtn = document.getElementById('visitlink');
     const backbtn = document.getElementById('back');
 
     const con1 = {
