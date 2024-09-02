@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const gameId = '1165835263'; // Replace with your game's ID
+    const gameId = '1165835263';
 
-    // Function to fetch and update current stats
     async function fetchGameData() {
+        console.log('REFRESHED!')
         try {
-            console.log('REFRESHED!')
-            const proxyUrl = 'https://corsproxy.io/?'; // Your CORS proxy URL
+            const proxyUrl = 'https://corsproxy.io/?';
             const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}`;
             const response = await fetch(proxyUrl + apiUrl);
             if (!response.ok) {
@@ -13,15 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             const data = await response.json();
             
-            // Example data extraction, replace these with actual API responses
-            const currentPlayers = data.data[0].playing; // Replace with actual field
-            const currentLikes = data.data[0].favoritedCount; // Replace with actual field or API
-            const currentVisits = data.data[0].visits; // Replace with actual field or API
+            const currentPlayers = data.data[0].playing; 
+            const currentLikes = data.data[0].favoritedCount;
+            const currentVisits = data.data[0].visits; 
             const lastUpdatedTimestamp = data.data[0].updated; // Example timestamp field
             const lastUpdatedDate = new Date(lastUpdatedTimestamp);
             const lastUpdated = lastUpdatedDate.toLocaleString(); // Converts to local time zone
 
-            // Update the HTML content
             document.getElementById('current-players').textContent = `Current Players: ${currentPlayers}`;
             document.getElementById('current-likes').textContent = `Current Favorites: ${currentLikes}`;
             document.getElementById('current-visits').textContent = `Current Visits: ${currentVisits}`;
