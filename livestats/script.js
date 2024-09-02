@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to fetch and update current stats
     async function fetchGameData() {
         try {
+            console.log('REFRESHED!')
             const proxyUrl = 'https://corsproxy.io/?'; // Your CORS proxy URL
             const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}`;
             const response = await fetch(proxyUrl + apiUrl);
