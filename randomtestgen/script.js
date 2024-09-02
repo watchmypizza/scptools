@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'X':
                 selectedCon = Object.entries(conx).map(([name, details]) => ({ name, details, source: 'conx' }));
                 break;
-            default:  // For "random" or any other value
+            default:
                 selectedCon = [
                     ...Object.entries(con1).map(([name, details]) => ({ name, details, source: 'con1' })),
                     ...Object.entries(con2).map(([name, details]) => ({ name, details, source: 'con2' })),
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         const randomIndex = Math.floor(Math.random() * selectedCon.length);
-        return selectedCon[randomIndex];  // Return the selected SCP with its source
+        return selectedCon[randomIndex];
     }
 
     let wikidotLink;
