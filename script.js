@@ -30,3 +30,6 @@ document.getElementById('randomcross').onclick = function() {
 document.getElementById('randomtestgen').onclick = function() {
     window.location.href = 'randomtestgen/randomtestgen.html';
 }
+document.getElementById('livestats').onclick = function() {
+    window.location.href = 'livestats/livestats.html';
+}
