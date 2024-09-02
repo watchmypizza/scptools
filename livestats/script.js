@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchGameData();
 
     // Set up interval to fetch data every 5 seconds
-    setInterval(fetchGameData, 5000);
+    setInterval(fetchGameData, 500);
 
     const backbtn = document.getElementById('back');
     backbtn.addEventListener('click', function() {
