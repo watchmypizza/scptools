@@ -9,9 +9,9 @@ function createBroadcast() {
     let broadcastMessage;
 
     if (message.trim() === "") { // Check if the message is empty
-        broadcastMessage = `/broadcast ${splitter} Status: ${siteStatus} ${splitter} Threat: ${threatLevel} ${splitter} Tests: ${testingPerms}`;
+        broadcastMessage = `/broadcast ${splitter} Status: ${siteStatus} ${splitter} Threat Level: ${threatLevel} ${splitter} Tests: ${testingPerms}`;
     } else {
-        broadcastMessage = `/broadcast ${splitter} Status: ${siteStatus} ${splitter} Threat: ${threatLevel} ${splitter} Tests: ${testingPerms} ${splitter} ${message}`;
+        broadcastMessage = `/broadcast ${splitter} Status: ${siteStatus} ${splitter} Threat Level: ${threatLevel} ${splitter} Tests: ${testingPerms} ${splitter} ${message}`;
     }
 
     document.getElementById('result').innerText = broadcastMessage;
