@@ -27,3 +27,6 @@ document.getElementById('randomscp').onclick = function() {
 document.getElementById('randomcross').onclick = function() {
     window.location.href = 'randomcross/randomcross.html';
 }
+document.getElementById('randomtestgen').onclick = function() {
+    window.location.href = 'randomtestgen/randomtestgen.html';
+}
