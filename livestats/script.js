@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     fetchGameData();
     console.log('Setting interval to refresh every 5 seconds');
-    setInterval(fetchGameData, 5000); // Refresh every 5 seconds
+    setInterval(fetchGameData, 1555); // Refresh every 5 seconds
 
     const backbtn = document.getElementById('back');
     backbtn.addEventListener('click', function() {
