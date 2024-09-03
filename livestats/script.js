@@ -2,22 +2,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const gameId = '1165835263';
 
     async function fetchGameData() {
-        console.log('REFRESHED!')
+        console.log('Fetching game data...');
+        
         try {
-            const proxyUrl = 'https://corsproxy.io/?';
+            // Construct the target API URL
             const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}`;
-            const response = await fetch(proxyUrl + apiUrl);
+            
+            // Encode the API URL for safe inclusion in the proxy URL
+            const proxyUrl = 'https://corsproxy.io/?';
+            const fullUrl = proxyUrl + encodeURIComponent(apiUrl);
+            
+            // Fetch data from the proxied URL
+            const response = await fetch(fullUrl);
+            
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
+
             const data = await response.json();
-            
-            const currentPlayers = data.data[0].playing; 
-            const currentLikes = data.data[0].favoritedCount;
-            const currentVisits = data.data[0].visits; 
-            const lastUpdatedTimestamp = data.data[0].updated; // Example timestamp field
+            console.log('Data fetched:', data); // Debug log to view fetched data
+
+            const currentPlayers = data.data[0]?.playing || 'N/A'; 
+            const currentLikes = data.data[0]?.favoritedCount || 'N/A';
+            const currentVisits = data.data[0]?.visits || 'N/A';
+            const lastUpdatedTimestamp = data.data[0]?.updated || Date.now();
             const lastUpdatedDate = new Date(lastUpdatedTimestamp);
-            const lastUpdated = lastUpdatedDate.toLocaleString(); // Converts to local time zone
+            const lastUpdated = lastUpdatedDate.toLocaleString();
 
             document.getElementById('current-players').textContent = `Current Players: ${currentPlayers}`;
             document.getElementById('current-likes').textContent = `Current Favorites: ${currentLikes}`;
@@ -32,11 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Fetch data initially
     fetchGameData();
-
-    // Set up interval to fetch data every 5 seconds
-    setInterval(fetchGameData, 500);
+    console.log('Setting interval to refresh every 5 seconds');
+    setInterval(fetchGameData, 5000); // Refresh every 5 seconds
 
     const backbtn = document.getElementById('back');
     backbtn.addEventListener('click', function() {
