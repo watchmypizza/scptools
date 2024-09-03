@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             // Construct the target API URL
-            const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}`;
+            const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}&timestamp=${new Date().getTime()}`;
             
             // Use cors-anywhere as the proxy
             const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
