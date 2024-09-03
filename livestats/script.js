@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}`;
             
             // Use cors-anywhere as the proxy
-            const proxyUrl = 'https://robwu.nl/cors-anywhere.html';
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
             const fullUrl = proxyUrl + apiUrl;
             
             // Fetch data from the proxied URL
