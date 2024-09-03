@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Construct the target API URL
             const apiUrl = `https://games.roblox.com/v1/games?universeIds=${gameId}`;
             
-            // Encode the API URL for safe inclusion in the proxy URL
-            const proxyUrl = 'https://corsproxy.io/?';
-            const fullUrl = proxyUrl + encodeURIComponent(apiUrl);
+            // Use cors-anywhere as the proxy
+            const proxyUrl = 'https://robwu.nl/cors-anywhere.html';
+            const fullUrl = proxyUrl + apiUrl;
             
             // Fetch data from the proxied URL
             const response = await fetch(fullUrl);
-            let githubpages= ":3"
+            
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
