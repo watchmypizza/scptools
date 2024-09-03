@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Fetch data from the proxied URL
             const response = await fetch(fullUrl);
-            
+            let githubpages= ":3"
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
