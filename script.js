@@ -33,3 +33,6 @@ document.getElementById('randomtestgen').onclick = function() {
 document.getElementById('livestats').onclick = function() {
     window.location.href = 'livestats/livestats.html';
 }
+document.getElementById('aboutme').onclick = function() {
+    window.location.href = 'aboutme/aboutme.html';
+}
