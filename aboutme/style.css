@@ -64,7 +64,8 @@ label {
     margin-bottom: 5px;
 }
 
-select, input[type="text"] {
+select,
+input[type="text"] {
     width: auto;
     padding: 10px;
     margin-bottom: 15px;
@@ -100,4 +101,29 @@ h4 {
 
 img {
     margin: 3.5px;
+}
+
+#otherproj {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #575fcf;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px auto;
+    /* Centers the button horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+#otherproj:hover {
+    color: rgb(98, 0, 255);
+}
+
+button:hover {
+    color: rgb(98, 0, 255);
 }
