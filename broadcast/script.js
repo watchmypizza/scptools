@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const scp = document.getElementById('scp');
     const scpLabel = document.getElementById('scpLabel');
     const sectorLabel = document.getElementById('sectorLabel')
-    let previousMessage = '';
+    let previousMessage = ''; // will u update my code
 
     sector.style.display = 'none';
     scp.style.display = 'none';
