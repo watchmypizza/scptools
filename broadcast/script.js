@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
             messageElement.style.display = 'block';
             stupidlabel.style.display = 'block';
             testingPerms.value = "No Perms needed";
-            messageElement.value = previousMessage;
             messageElement.value = "";
             sector.style.display = 'none';
             scp.style.display = 'none';
