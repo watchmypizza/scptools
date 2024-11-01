@@ -45,8 +45,10 @@ label {
     text-align: left;
 }
 
-select, input {
-    width: calc(100% - 20px); /* Subtract padding from width */
+select,
+input {
+    width: calc(100% - 20px);
+    /* Subtract padding from width */
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -63,7 +65,8 @@ select {
     background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
     background-repeat: no-repeat;
     background-position: right 10px center;
-    padding-right: 30px; /* Make room for the arrow */
+    padding-right: 30px;
+    /* Make room for the arrow */
 }
 
 button {
@@ -76,6 +79,25 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    /* Ensures both containers are split */
+    align-items: center;
+    gap: 10px;
+    /* Adds small space between them */
+}
+
+.sector-group {
+    width: 50%;
+    /* Adjust width as needed */
+}
+
+.scp-group {
+    width: 50%;
+    /* Adjust width as needed */
 }
 
 button:hover {

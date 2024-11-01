@@ -1,61 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>SCP Tools v2</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="../favicon.png" type="image/x-icon">
-    </head>
-    <body>
-        <div class="container">
-            <button id="back" type="button">Back</button>
-            <h1>SCP Tools v2</h1>
-            <form id="broadcastform">
-                <label for="siteStatus">Site Status:</label>
-                <select id="siteStatus">
-                    <option value="Clear">Clear</option>
-                    <option value="CD Escape">CD Escape</option>
-                    <option value="CI">CI</option>
-                    <option value="Breach">Breach</option>
-                    <option value="Lockdown">Lockdown</option>
-                </select>
 
-                <label for="threatLevel">Threat Level:</label>
-                <select id="threatLevel">
-                    <option value="Low">Low</option>
-                    <option value="Medium">Medium</option>
-                    <option value="High">High</option>
-                </select>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>SCP Tools v2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+</head>
 
-                <label for="testingPerms">Testing Perms:</label>
-                <select id="testingPerms">
-                    <option value="No Perms needed">No Perms</option>
-                    <option value="Halted">Halted</option>
-                    <option value="Con-X SiD+">Con-X SiD+</option>
-                    <option value="Con-X & 35 SiD+">Con-X & 35 SiD+</option>
-                </select>
-                <label for="cdriot">Class-D Status:</label>
-                <select id="cdriot">
-                    <option value="">Leave Blank</option>
-                    <option value="neutral">Neutral</option>
-                    <option value="Singular Riots">Singular Riots</option>
-                    <option value="Multiple aggressive CD">Multiple aggressive CD</option>
-                    <option value="riot">Riot in progress</option>
-                </select>
+<body>
+    <div class="container">
+        <button id="back" type="button">Back</button>
+        <h1>SCP Tools v2</h1>
+        <form id="broadcastform">
+            <label for="siteStatus">Site Status:</label>
+            <select id="siteStatus">
+                <option value="Clear">Clear</option>
+                <option value="CD Escape">CD Escape</option>
+                <option value="CI">CI</option>
+                <option value="Breach">Breach</option>
+                <option value="Lockdown">Lockdown</option>
+            </select>
 
-                <label id="stupidlabel" for="message">Message:</label>
-                <input type="text" id="message" placeholder="Custom Message">
-    
-                <label for="splitter">Splitter:</label>
-                <input type="text" id="splitter" value="//">
-    
-                <button type="button" id="taxcollectors">Create</button>
-            </form>
+            <label for="threatLevel">Threat Level:</label>
+            <select id="threatLevel">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
 
-            <div id="result"></div>
-        </div>
+            <label for="testingPerms">Testing Perms:</label>
+            <select id="testingPerms">
+                <option value="No Perms needed">No Perms</option>
+                <option value="Halted">Halted</option>
+                <option value="Con-X SiD+">Con-X SiD+</option>
+                <option value="Con-X & 35 SiD+">Con-X & 35 SiD+</option>
+            </select>
+            <label for="tmplate">Template:</label>
+            <select id="tmplate">
+                <option value="">Leave Blank</option>
+                <option value="emergencies">Available Combatants should respond.</option>
+                <option value="neutral">Neutral</option>
+                <option value="Singular Riots">Singular Riots</option>
+                <option value="Multiple aggressive CD">Multiple aggressive CD</option>
+                <option value="riot">Riot in progress</option>
+                <option value="hivemind">SCP-610 Outbreak</option>
+                <option value="powerfail">Generators going down</option>
+                <option value="blackout">Blackout</option>
+                <option value="plague">SCP-008 Outbreak</option>
+                <option value="multiplebreaches">Multiple Breaches</option>
+                <option value="singlebreach">Singular Breach</option>
+                <option value="nuking">Warhead detonation</option>
+                <option value="candle">SCP-310 Outbreak</option>
+                <option value="able">SCP-076 breach</option>
+            </select>
 
-        <script src="script.js"></script>
-    </body>
+            <div class="form-row">
+                <div class="form-group sector-group">
+                    <label id="sectorLabel" for="sector">Sector</label>
+                    <input type="text" id="sector" placeholder="Con 2">
+                </div>
+
+                <div class="form-group scp-group">
+                    <label id="scpLabel" for="scp">SCP</label>
+                    <input type="text" id="scp" placeholder="SCP-008">
+                </div>
+            </div>
+
+            <label id="stupidlabel" for="message">Message:</label>
+            <input type="text" id="message" placeholder="Custom Message">
+
+            <label for="splitter">Splitter:</label>
+            <input type="text" id="splitter" value="//">
+
+            <button type="button" id="taxcollectors">Create</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
