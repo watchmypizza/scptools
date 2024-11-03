@@ -1,23 +1,34 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-
     function createBroadcast() {
         const messageElement = document.getElementById('message');
-        const message = messageElement.value;
         const siteStatus = document.getElementById('siteStatus').value;
         const threatLevel = document.getElementById('threatLevel').value;
         const testingPerms = document.getElementById('testingPerms').value;
-        const template = document.getElementById('tmplate');
+        const template = document.getElementById('tmplate').value;
         const splitter = document.getElementById('splitter').value;
 
-        let broadcastMessage;
+        // Read scp and sector values directly from the inputs
+        const scp = document.getElementById('scp').value;
+        const sector = document.getElementById('sector').value;
 
-        if (message.trim() === "") {
-            broadcastMessage = `/broadcast ${splitter} Status: ${siteStatus} ${splitter} Threat Level: ${threatLevel} ${splitter} Tests: ${testingPerms}`;
+        let message;
+
+        // Update the message immediately based on the template selection
+        if (template.trim() === "singlebreach") {
+            message = `${scp} has breached containment in ${sector}, all recontainment units are to respond immediately!`;
+            messageElement.value = message;  // Update the input field for display
         } else {
-            broadcastMessage = `/broadcast ${splitter} Status: ${siteStatus} ${splitter} Threat Level: ${threatLevel} ${splitter} Tests: ${testingPerms} ${splitter} ${message}`;
+            message = messageElement.value;  // Use whatever is already in the message input
         }
 
+        // Construct the broadcast message
+        let broadcastMessage = `/broadcast ${splitter} Status: ${siteStatus} ${splitter} Threat Level: ${threatLevel} ${splitter} Tests: ${testingPerms}`;
+        if (message.trim() !== "") {
+            broadcastMessage += ` ${splitter} ${message}`;
+        }
+
+        // Display the broadcast message in the result
         document.getElementById('result').innerText = broadcastMessage;
     }
 
