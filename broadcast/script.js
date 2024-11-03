@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const template = document.getElementById('tmplate').value;
         const splitter = document.getElementById('splitter').value;
 
-        // Read scp and sector values directly from the inputs
         const scp = document.getElementById('scp').value;
         const sector = document.getElementById('sector').value;
 
@@ -72,10 +71,10 @@ document.addEventListener('DOMContentLoaded', function () {
             stupidlabel.style.visibility = 'block';
             previousMessage = messageElement.value;
             messageElement.value = "";
-            sector.style.display = 'block';     // Shows the sector input field
-            scp.style.display = 'block';        // Shows the SCP input field
-            sectorLabel.style.display = 'block';     // Shows the Sector label
-            scpLabel.style.display = 'block';        // Shows the SCP label
+            sector.style.display = 'block';
+            scp.style.display = 'block';
+            sectorLabel.style.display = 'block';
+            scpLabel.style.display = 'block';
         } else {
             messageElement.style.display = 'none';
             stupidlabel.style.display = 'none';
